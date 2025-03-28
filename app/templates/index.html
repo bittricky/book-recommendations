@@ -11,29 +11,33 @@
   </head>
   <body class="bg-primary-dark text-secondary-light font-sans">
     <div class="max-w-6xl mx-auto px-4 py-8">
-      <header class="text-center mb-8">
-        <h1 class="text-4xl font-bold text-primary mb-8">
+      <header class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-secondary tracking-[0.1em] mb-6">
           Book Recommendations
         </h1>
-        <p class="text-lg text-secondary-light mt-8">Welcome!</p>
-        <p class="text-md text-secondary-light mb-8">
-          Why not take a moment to browse?
+        <div class="bg-secondary h-1 w-24 mx-auto mb-8 rounded-full"></div>
+        <p class="text-xl text-secondary-light mb-4">
+          Take a moment and browse around
         </p>
-        <p class="text-sm text-secondary-light mb-8">
-          You may find something you'd like. Maybe have a new experience.
+        <p class="text-accent-light mb-2 max-w-2xl mx-auto">
+          Discover new worlds, meet fascinating characters, immerse yourself,
+          and expand your horizons
+        </p>
+        <p class="text-accent text-sm mb-8 max-w-xl mx-auto">
+          Every story is a door to a new experience. Where will you go today?
         </p>
       </header>
 
-      <div class="flex max-w-xl mx-auto mb-8">
+      <div class="flex max-w-xl mx-auto mb-8 shadow-lg">
         <input
           type="text"
           id="search-input"
-          class="flex-1 px-4 py-2 border border-accent rounded-l-md focus:outline-none focus:ring-2 focus:ring-secondary bg-primary text-white placeholder-white"
+          class="flex-1 px-4 py-3 border-2 border-accent rounded-l-lg focus:outline-none focus:ring-2 focus:ring-secondary bg-primary text-white placeholder-white"
           placeholder="Search for books..."
         />
         <button
           id="search-button"
-          class="bg-secondary text-primary-dark px-6 py-2 rounded-r-md hover:bg-secondary-dark transition-colors"
+          class="bg-secondary text-primary-dark px-6 py-3 rounded-r-lg hover:bg-secondary-dark transition-colors font-bold tracking-wide"
         >
           Search
         </button>
@@ -41,28 +45,36 @@
 
       <button
         id="recommendation-button"
-        class="block mx-auto mb-8 bg-secondary text-primary-dark font-medium px-6 py-2 rounded-md hover:bg-secondary-dark transition-colors"
+        class="block mx-auto mb-12 bg-accent text-white font-bold px-8 py-3 rounded-lg hover:bg-accent-light transition-colors duration-200 shadow-lg tracking-wide uppercase"
       >
-        Recommend Me Books
+        Discover New Books
       </button>
 
-      <div id="loading" class="hidden text-center py-8 text-secondary-light">
-        <p>Loading books...</p>
+      <div id="loading" class="hidden text-center py-8 text-secondary">
+        <p class="text-lg">Searching the literary universe...</p>
       </div>
 
       <div id="no-results" class="hidden text-center py-8 text-secondary-light">
-        <p>No books found. Try a different search term.</p>
+        <p class="text-lg">No books found. Try a different search term.</p>
+        <p class="text-accent-light text-sm mt-2">
+          Perhaps try a broader term or a different author?
+        </p>
       </div>
 
       <div
         id="books-container"
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
       >
         <!-- Book cards will be inserted here -->
       </div>
     </div>
 
-    <hr class="border-t border-accent my-8" />
+    <footer class="mt-16 pb-8 text-center">
+      <div class="bg-accent h-px w-1/2 mx-auto mb-8 opacity-50"></div>
+      <p class="text-accent-light text-sm">
+        &copy; 2025 Book Recommendations | Powered by Open Library API
+      </p>
+    </footer>
 
     <script src="{{ url_for('static', filename='scripts/scripts.js') }}"></script>
   </body>

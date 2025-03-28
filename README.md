@@ -10,10 +10,6 @@ A Flask-based web application that provides book recommendations using the Open 
 - Responsive design that works on different screen sizes
 - Custom 404 error page
 
-## Screenshots
-
-(Add screenshots here)
-
 ## Tech Stack
 
 - **Backend**: Flask (Python)

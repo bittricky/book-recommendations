@@ -9,27 +9,45 @@
       href="{{ url_for('static', filename='styles/style.css') }}"
     />
   </head>
-  <body class="bg-primary-dark text-secondary-light font-sans">
+  <body class="bg-purple-900 text-gray-200 font-sans">
     <div class="min-h-screen flex items-center justify-center px-4">
       <main
         class="w-full max-w-4xl mx-auto px-4 flex flex-col items-center justify-center text-center"
       >
         <h1
-          class="text-secondary text-2xl md:text-3xl tracking-[0.3em] uppercase mb-12"
+          class="text-yellow-400 text-2xl md:text-3xl tracking-[0.3em] uppercase mb-12"
         >
-          You seem to be looking for something
+          Looking for something?
         </h1>
 
-        <div class="text-9xl font-bold text-secondary mb-12">404</div>
+        <!-- Replaced text 404 with SVG -->
+        <svg
+          class="w-auto h-32 md:h-40 text-yellow-400 mb-12 font-bold"
+          viewBox="0 0 300 100"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <text
+            x="50%"
+            y="55%"
+            dominant-baseline="middle"
+            text-anchor="middle"
+            font-size="90"
+          >
+            404
+          </text>
+        </svg>
 
-        <p class="text-accent mb-12 max-w-md">
-          However, you've wandered somewhere where you shouldn't be, don't worry,
-          let's help you find your way back.
+        <p class="text-purple-300 max-w-md">
+          You've wandered somewhere where you shouldn't be
+        </p>
+        <p class="text-purple-300 mb-12 max-w-md">
+          Don't worry, let's help you find your way back
         </p>
 
         <a
           href="{{ url_for('main.index') }}"
-          class="bg-secondary hover:bg-secondary-dark text-primary-dark font-bold py-4 px-8 rounded-lg uppercase tracking-[0.3em] transition-colors duration-200 text-sm inline-flex items-center gap-2"
+          class="bg-yellow-500 hover:bg-yellow-600 text-purple-900 font-bold py-4 px-8 rounded-lg uppercase tracking-[0.3em] transition-colors duration-200 text-sm inline-flex items-center gap-2"
         >
           <svg
             class="w-5 h-5"

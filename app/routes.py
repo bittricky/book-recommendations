@@ -38,3 +38,5 @@ def get_recommendations():
                 book['cover_url'] = BookService.get_book_cover_url(book['cover_i'])
     
     return jsonify(result)
+
+

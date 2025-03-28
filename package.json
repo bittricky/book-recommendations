@@ -1,0 +1,12 @@
+{
+  "name": "book-recommendations",
+  "author": "Mitul Patel",
+  "version": "1.0.0",
+  "description": "Book recommendation application",
+  "scripts": {
+    "build:css": "tailwindcss -i ./app/static/styles/tailwind.css -o ./app/static/styles/style.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}

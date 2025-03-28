@@ -9,17 +9,17 @@
       href="{{ url_for('static', filename='styles/style.css') }}"
     />
   </head>
-  <body class="bg-gray-100 text-gray-800 font-sans">
+  <body class="bg-primary-dark text-secondary-light font-sans">
     <div class="max-w-6xl mx-auto px-4 py-8">
       <header class="text-center mb-8">
-        <h1 class="text-4xl font-bold text-primary mb-8">
+        <h1 class="text-4xl font-bold text-secondary mb-8">
           Book Recommendations
         </h1>
-        <p class="text-lg text-gray-600 mt-8">Welcome!</p>
-        <p class="text-md text-gray-600 mb-8">
+        <p class="text-lg text-secondary-light mt-8">Welcome!</p>
+        <p class="text-md text-secondary-light mb-8">
           Why not take a moment to browse?
         </p>
-        <p class="text-sm text-gray-600 mb-8">
+        <p class="text-sm text-secondary-light mb-8">
           You may find something you'd like. Maybe have a new experience.
         </p>
       </header>
@@ -28,12 +28,12 @@
         <input
           type="text"
           id="search-input"
-          class="flex-1 px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-primary"
+          class="flex-1 px-4 py-2 border border-accent rounded-l-md focus:outline-none focus:ring-2 focus:ring-secondary bg-primary text-white placeholder-white"
           placeholder="Search for books..."
         />
         <button
           id="search-button"
-          class="bg-primary text-white px-6 py-2 rounded-r-md hover:bg-primary-dark"
+          class="bg-secondary text-primary-dark px-6 py-2 rounded-r-md hover:bg-secondary-dark transition-colors"
         >
           Search
         </button>
@@ -41,16 +41,16 @@
 
       <button
         id="recommendation-button"
-        class="block mx-auto mb-8 bg-secondary text-primary font-medium px-6 py-2 rounded-md hover:bg-secondary-dark"
+        class="block mx-auto mb-8 bg-secondary text-primary-dark font-medium px-6 py-2 rounded-md hover:bg-secondary-dark transition-colors"
       >
         Recommend Me Books
       </button>
 
-      <div id="loading" class="hidden text-center py-8 text-gray-600">
+      <div id="loading" class="hidden text-center py-8 text-secondary-light">
         <p>Loading books...</p>
       </div>
 
-      <div id="no-results" class="hidden text-center py-8 text-gray-600">
+      <div id="no-results" class="hidden text-center py-8 text-secondary-light">
         <p>No books found. Try a different search term.</p>
       </div>
 
@@ -62,7 +62,7 @@
       </div>
     </div>
 
-    <hr class="border-t border-gray-200 my-8" />
+    <hr class="border-t border-accent my-8" />
 
     <script src="{{ url_for('static', filename='scripts/scripts.js') }}"></script>
   </body>

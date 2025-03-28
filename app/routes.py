@@ -28,7 +28,13 @@ def search_books():
 
 @bp.route('/api/recommendations', methods=['GET'])
 def get_recommendations():
-    query = random.choice()
+    random_year = random.randint(1900, 2023)
+    
+    if random.choice([True, False]):
+        query = f'first_publish_year:{random_year}'
+    else:
+        letters = 'abcdefghijklmnopqrstuvwxyz'
+        query = random.choice(letters)
     
     result = BookService.search_books(query, page=1, limit=10)
     
